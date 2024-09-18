@@ -1,0 +1,198 @@
+create two tables student and fee
+using sql or .txt format
+load in to power bi
+and display join report in report panel
+-------------------------------------------
+DESKTOP-ME6RGEB\SQLEXPRESS
+---------------------------------------
+with / with out sql queries:
+
+
+
+CREATE TABLE Student (      
+  id int PRIMARY KEY IDENTITY,     
+  admission_no varchar(45) NOT NULL,  
+  first_name varchar(45) NOT NULL,      
+  last_name varchar(45) NOT NULL,  
+  age int,  
+  city varchar(25) NOT NULL      
+);    
+  
+
+
+CREATE TABLE Fee (   
+  admission_no varchar(45) NOT NULL,  
+  course varchar(45) NOT NULL,      
+  amount_paid int,    
+);  
+
+
+
+
+excel
+power bi
+tableau
+Qlik
+IBM cognos
+sql(joins  order by , group by, having..)
+sub queries
+
+
+python
+R
+
+
+sql sub query:
+
+sal 
+
+select * from emp where  sal= select max(sal) from emp;
+
+
+
+
+
+
+
+WORKING WITH DAX IN POWER BI:
+
+DYNAMIC ANALYSIS EXPRESSION
+
+
+
+SINGLE VALUE OUT COME
+
+NEW MEASURE
+
+SQL:
+DISAPLY MAX SAL IN A TABLE
+
+SELECT MAX(SAL) FROM EMP;
+
+MAX(SAL)
+-------
+
+789000
+
+
+
+
+
+
+TABLE OUT COME
+
+NEW TABLE
+
+DISPLAY DEPT WISE MAX SALARY
+
+SELECT DNAME,MAX(SAL) FROM EMP GROUP BY DNAME;
+
+
+DNAME,MAX(SAL)
+--------------
+HR,90000
+FIN,78000
+-------
+---
+---
+--
+
+
+1. TOTAL SALES
+2. MAX SALES
+3. AVERAGE SALES
+
+4. MAX PROFIT
+5. AVG PROFIT
+
+6. NO OF ORDERS
+
+
+--------------------------------------
+
+create Restaurant dash board
+--------------------------------
+1. No of Males   = CALCULATE(sum(tips[size]),tips[sex]="male")
+2. No of Females = CALCULATE(sum(tips[size]),tips[sex]="female")
+3. Male smokers =  CALCULATE(sum(tips[size]),tips[sex]="male" &&   									tips[smoker]="yes")
+4. Female smokers=  CALCULATE(sum(tips[size]),tips[sex]="female" &&   										tips[smoker]="yes")
+5. Total Tip  =  sum(  tips[tip]    )
+6. Total Bill =  sum( tips[Total_bill]    )
+
+7. Male smoker Total Bill
+ CALCULATE([Total Bill],tips[sex]="male" && tips[smoker]="yes")
+
+8. Female smoker Total Bill
+CALCULATE([Total Bill],tips[sex]="female" && tips[smoker]="yes")
+
+9. Male Total Tip
+CALCULATE([Total Tip],tips[sex]="male" )
+
+10.Female Total Tip
+CALCULATE([Total Tip],tips[sex]="female" )
+
+
+
+11. Day wise No of Male and female customers
+12. Dinner time lunch time No of customers
+13. Day wise Total Tip and Total Bill
+
+14. Total customers = [No of Males] + [No of Females]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+orders(od,oname,cid)
+customers(cid,cname,....)
+shipping(oid,cid,payment….)
+
+
+
+
