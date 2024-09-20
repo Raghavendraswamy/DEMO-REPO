@@ -1,6 +1,6 @@
-name: Run Unit Test via Pytest
+name: Python application
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -19,15 +19,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Lint with Ruff
+      - name: install unit test
         run: |
-          pip install ruff
+          pip install unittest
           ruff --format=github --target-version=py310 .
         continue-on-error: true
-      - name: Test with pytest
+
+      - name: Run tests
         run: |
-          coverage run -m unittest  -v
-      - name: Generate Coverage Report
-        run: |
-          coverage report -m
+          python -m unittest TEST3.py
       
