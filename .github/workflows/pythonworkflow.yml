@@ -21,7 +21,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: install unit test
         run: |
-          pip install unittest
+          pip install unittest=3.12
           ruff --format=github --target-version=py310 .
         continue-on-error: true
 
