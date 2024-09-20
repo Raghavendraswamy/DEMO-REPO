@@ -1,4 +1,5 @@
 sample create two tables student and fee
+file2
 using sql or .txt format
 load in to power bi
 and display join report in report panel
